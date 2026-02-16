@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructeur Modulaire</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="toolbar" id="toolbar"></div>
+      <div class="actions">
+        <button id="saveProjectBtn">Sauvegarder</button>
+        <button id="restorePanelsBtn">Restaurer panneaux</button>
+      </div>
+    </header>
+
+    <main id="workspace">
+      <section id="canvas" aria-label="Zone de création"></section>
+    </main>
+
+    <section id="inspector" class="panel code-inspector">
+      <div class="panel-header"><span>Inspecteur code live</span><button class="panel-close">✕</button></div>
+      <div class="panel-body inspector-grid">
+        <label>HTML<textarea id="htmlEditor"></textarea></label>
+        <label>CSS<textarea id="cssEditor"></textarea></label>
+        <label>JavaScript<textarea id="jsEditor"></textarea></label>
+      </div>
+    </section>
+
+    <section id="contextPanel" class="panel">
+      <div class="panel-header"><span>Options contextuelles</span><button class="panel-close">✕</button></div>
+      <div class="panel-body">
+        <div id="contextOptions"></div>
+      </div>
+    </section>
+
+    <ul id="contextMenu" class="context-menu" hidden></ul>
+
+    <input id="filePicker" type="file" accept="image/*,video/*" hidden />
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
